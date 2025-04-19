@@ -1,0 +1,16 @@
+{
+    "name": "portfolio-website",
+    "version": "1.0.0",
+    "description": "A personal portfolio website with CI/CD deployment",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "author": "Amara",
+    "license": "MIT",
+    "dependencies": {
+      "ejs": "^3.1.8",
+      "express": "^4.18.2"
+    }
+  }
+  
