@@ -8,19 +8,23 @@ const PORT = 3000;
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-// Serve static files (CSS, JS, images) for /portfolio
-app.use('/portfolio', express.static(path.join(__dirname, 'public')));
+// Serve static files (CSS, JS, images)
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Handle all /portfolio routes
-app.get('/portfolio', (req, res) => {
+// Routes
+app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.get('/portfolio/about', (req, res) => {
+app.get('/about', (req, res) => {
   res.render('about');
 });
 
-app.get('/portfolio/contact', (req, res) => {
+app.get('/projects', (req, res) => {
+  res.render('projects');
+});
+
+app.get('/contact', (req, res) => {
   res.render('contact');
 });
 
